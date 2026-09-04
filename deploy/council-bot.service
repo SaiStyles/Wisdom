@@ -1,0 +1,23 @@
+[Unit]
+Description=Council of Wise Men Discord Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__HOME__/Wisdom
+ExecStart=__HOME__/Wisdom/.venv/bin/python main.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=__HOME__/Wisdom/data
+
+[Install]
+WantedBy=multi-user.target

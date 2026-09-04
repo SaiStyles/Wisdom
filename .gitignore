@@ -1,0 +1,26 @@
+# Secrets
+.env
+
+# Runtime data (SQLite database + WAL files)
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Roster with real Discord IDs — keep only roster.csv.example in git
+scripts/roster.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
